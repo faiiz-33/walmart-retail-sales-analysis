@@ -1,0 +1,138 @@
+-- create a database 
+CREATE DATABASE walmart;
+USE walmart;
+
+-- create the tables
+
+CREATE TABLE stores (
+    Store INT PRIMARY KEY,
+    Type CHAR(1),
+    Size INT);
+
+CREATE TABLE features (
+    Store INT,
+    Date text,
+    Temperature FLOAT,
+    Fuel_Price FLOAT,
+    MarkDown1 FLOAT,
+    MarkDown2 FLOAT,
+    MarkDown3 FLOAT,
+    MarkDown4 FLOAT,
+    MarkDown5 FLOAT,
+    CPI FLOAT,
+    Unemployment FLOAT,
+    IsHoliday BOOLEAN);
+
+CREATE TABLE sales (
+    Store INT,
+    Dept INT,
+    Date text,
+    Weekly_Sales FLOAT,
+    IsHoliday BOOLEAN);
+
+-- imort your data into their respective tables 
+-- check your tables ( row count)
+SELECT COUNT(*) FROM stores;
+SELECT COUNT(*) FROM features;
+SELECT COUNT(*) FROM sales;
+
+-- identify missing values 
+SELECT * FROM features
+WHERE Temperature IS NULL
+   OR CPI IS NULL
+   OR Unemployment IS NULL;
+
+-- handle missing values, if nulls more than 20% drop them, otherwise replace with mean or keep as Nan
+UPDATE Stores
+SET Size = (SELECT AVG(Size) FROM Stores)
+WHERE Size IS NULL;
+
+-- convert date into DATE format 
+
+UPDATE sales SET Date = STR_TO_DATE(Date, '%Y-%m-%d');
+UPDATE features SET Date = STR_TO_DATE(Date, '%Y-%m-%d');
+
+--EDA - find distinct values in the columns 
+SELECT COUNT(DISTINCT Store) FROM sales;
+SELECT COUNT(DISTINCT Dept) FROM sales;
+SELECT COUNT(*) FROM sales;
+
+-- find the averages of the colunns 
+SELECT AVG(weelky_sales) FROM sales;
+SELECT AVG(size) FROM stores;
+
+-- find the top 10 selling stores by total and average
+SELECT Store, SUM(Weekly_Sales) AS total_sales, AVG(Weekly_Sales) AS AVG_sales
+FROM sales
+GROUP BY Store
+ORDER BY total_sales DESC
+limit 10;
+
+-- find the top 10 selling departments 
+SELECT Dept, SUM(Weekly_Sales) AS dept_sales
+FROM sales
+GROUP BY Dept
+ORDER BY dept_sales DESC
+LIMIT 10;
+
+-- finde the sales over time 
+SELECT YEAR(Date) AS year, SUM(Weekly_Sales)
+FROM sales
+GROUP BY YEAR(Date)
+ORDER BY year;
+
+SELECT Month(Date) AS month, SUM(Weekly_Sales)
+FROM sales
+GROUP BY MONTH(Date)
+ORDER BY month;
+
+-- find the week to week growth across all stores 
+SELECT
+    Store,
+    Date,
+    Weekly_Sales,
+    Weekly_Sales - LAG(Weekly_Sales) OVER (PARTITION BY Store ORDER BY Date) 
+        AS wow_growth
+FROM sales;
+
+-- find the affect of store type on sales 
+SELECT s.Store, st.Type, st.Size, SUM(s.Weekly_Sales) AS total_sales
+FROM sales s
+JOIN stores st ON s.Store = st.Store
+GROUP BY s.Store, st.Type, st.Size
+ORDER BY total_sales DESC;
+
+-- find the affect of temperature on sales 
+SELECT f.Temperature, AVG(s.Weekly_Sales)
+FROM sales s
+JOIN features f USING (Store, Date)
+GROUP BY f.Temperature
+ORDER BY f.Temperature;
+
+-- find the affect of fuel price on sales 
+SELECT f.Fuel_price, AVG(s.Weekly_Sales)
+FROM sales s
+JOIN features f USING (Store, Date)
+GROUP BY f.fuel_price
+ORDER BY f.fuel_price;
+
+
+--Economical factor analysis - measure the affect of the holiday season on sales 
+SELECT IsHoliday, AVG(Weekly_Sales)
+FROM sales
+GROUP BY IsHoliday;
+
+-- measure the growth percentage durign the holiday season 
+WITH a AS (
+    SELECT 
+        AVG(CASE WHEN IsHoliday = 0 THEN Weekly_Sales END) AS non_holiday_avg,
+        AVG(CASE WHEN IsHoliday = 1 THEN Weekly_Sales END) AS holiday_avg
+    FROM sales
+)
+SELECT
+    holiday_avg,
+    non_holiday_avg,
+    ((holiday_avg - non_holiday_avg) / non_holiday_avg) * 100 
+        AS holiday_growth_percentage
+FROM a;
+
