@@ -1,1 +1,118 @@
 # walmart-retail-sales-analysis
+Retail Sales Analysis & Power BI Dashboard (Walmart Dataset)
+
+Tools Used: SQL, Power BI, Python
+Status: Completed
+
+⸻
+
+Project Overview
+
+This project analyzes 3 years of Walmart retail data to understand sales trends, holiday season effects, department performance, and relationships with key economic indicators (fuel prices, CPI, and unemployment).
+Data processing was performed in SQL, exploratory checks in Python, and insights were presented in an interactive Power BI dashboard.
+
+⸻
+
+Objectives
+	•	Analyze weekly, monthly, and annual sales patterns
+	•	Compare holiday vs non-holiday sales performance
+	•	Identify top-performing departments and stores
+	•	Examine correlations between sales and economic factors
+	•	Build a clean, interactive Power BI dashboard with drill-downs
+
+⸻
+
+Technologies Used
+	•	SQL Workbench – Data exploration, joins, cleaning
+	•	Python (Jupyter) – Quick validation checks
+	•	Power BI – Dashboard, KPIs, drill-down visuals
+	•	GitHub – Documentation & project versioning
+
+⸻
+
+📂 Repository Structure
+
+📁 data/              → Raw & cleaned datasets  
+📁 sql/               → Queries for cleaning, joining & analysis  
+📁 python/            → Optional exploratory notebook  
+📁 powerbi/           → .pbix file + dashboard screenshots  
+📁 docs/              → Project summary & exported visuals
+
+
+⸻
+
+📊 Power BI Dashboard
+
+🔗 Live Interactive Dashboard
+
+👉 Click here to view the report:
+[PUBLIC POWER BI REPORT LINK – INSERT YOUR LINK HERE]
+
+
+
+Dashboard Pages
+
+Page 1 — Sales Summary
+	•	Total sales across 3 years
+	•	Sales by department
+	•	Sales over time with drill-down
+	•	Holiday vs non-holiday sales
+	•	Sales by store type
+	•	KPIs: total stores, total departments, total sales, avg store size
+
+Page 2 — Economic Factors
+	•	Avg sales vs fuel price
+	•	Avg sales vs store size
+	•	CPI trends
+	•	Unemployment trends
+
+⸻
+
+SQL Work (Highlights)
+
+Sample tasks performed:
+	•	Joining features, sales, stores
+	•	Handling missing values
+	•	Creating monthly aggregations
+	•	Identifying peak months and years
+	•	Holiday vs non-holiday comparison
+	•	Economic factor analysis
+
+Example snippet:
+
+SELECT 
+    YEAR(Date) AS Year,
+    MONTH(Date) AS Month,
+    SUM(Weekly_Sales) AS Monthly_Sales
+FROM sales
+GROUP BY Year, Month
+ORDER BY Year, Month;
+
+All SQL queries are inside the /sql folder.
+
+⸻
+
+Key Insights
+	•	~33% of total revenue occurs during holiday weeks
+	•	Base sales remain strong year-round (grocery-driven behavior)
+	•	Store size correlates moderately with higher sales
+	•	Fuel price and CPI show mild downward correlation with sales
+	•	Unemployment trends show no immediate short-term effect
+
+⸻
+
+🤝 What I Learned
+	•	Building a multi-page Power BI dashboard
+	•	Structuring SQL queries for business analysis
+	•	Cleaning and merging datasets in SQL
+	•	Creating drill-downs, DAX measures, and KPIs in Power BI
+	•	Connecting economic indicators to retail performance
+
+⸻
+
+📬 Contact
+
+If you’d like to discuss the analysis or dashboard:
+
+Email Address: faiz.alharthi90@gmail.com
+LinkedIn: (www.linkedin.com/in/faiz-k-alharthi)
