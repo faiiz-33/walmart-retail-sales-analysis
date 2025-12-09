@@ -1,0 +1,39 @@
+# -----------------------------------------
+# Walmart Data Integration Script
+# -----------------------------------------
+
+import pandas as pd
+
+# 1. Load cleaned tables
+stores = pd.read_csv("stores.csv", sep=';')
+features = pd.read_csv("features.csv", sep=';')
+sales = pd.read_csv("sales.csv", sep=';')
+
+# 2. Inspect columns to confirm correct loading
+print("Stores columns:", stores.columns)
+print("Sales columns:", sales.columns)
+print("Features columns:", features.columns)
+
+# 3. Assign correct data types
+sales["Store"] = sales["Store"].astype(int)
+features["Store"] = features["Store"].astype(int)
+
+sales["Date"] = pd.to_datetime(sales["Date"])
+features["Date"] = pd.to_datetime(features["Date"])
+
+# 4. Merge Sales + Features on Date & Store
+merged = sales.merge(
+    features,
+    on=["Store", "Date"],
+    how="left"
+)
+
+# 5. Merge the result with Stores
+walmart = merged.merge(
+    stores,
+    on="Store",
+    how="left"
+)
+
+# 6. Save final cleaned dataset
+walmart.to_csv("walmart_data.csv", index=False)
