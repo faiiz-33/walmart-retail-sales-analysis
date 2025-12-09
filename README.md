@@ -46,22 +46,20 @@ Technologies Used
 🔗 Live Interactive Dashboard
 
 👉 Click here to view the report:
-[PUBLIC POWER BI REPORT LINK – INSERT YOUR LINK HERE]
 
-
+(https://aka.ms/AAyzv32)
 
 Dashboard Pages
 
 Page 1 — Sales Summary
-	•	Total sales across 3 years
 	•	Sales by department
 	•	Sales over time with drill-down
 	•	Holiday vs non-holiday sales
 	•	Sales by store type
-	•	KPIs: total stores, total departments, total sales, avg store size
+	•	KPIs: total stores, total departments, total sales, avg sales per week
 
 Page 2 — Economic Factors
-	•	Avg sales vs fuel price
+	•	Avg sales and fuel price over time
 	•	Avg sales vs store size
 	•	CPI trends
 	•	Unemployment trends
@@ -78,16 +76,6 @@ Sample tasks performed:
 	•	Holiday vs non-holiday comparison
 	•	Economic factor analysis
 
-Example snippet:
-
-SELECT 
-    YEAR(Date) AS Year,
-    MONTH(Date) AS Month,
-    SUM(Weekly_Sales) AS Monthly_Sales
-FROM sales
-GROUP BY Year, Month
-ORDER BY Year, Month;
-
 All SQL queries are inside the /sql folder.
 
 ⸻
@@ -101,7 +89,7 @@ Key Insights
 
 ⸻
 
-🤝 What I Learned
+What I Learned
 	•	Building a multi-page Power BI dashboard
 	•	Structuring SQL queries for business analysis
 	•	Cleaning and merging datasets in SQL
