@@ -1,7 +1,7 @@
 # walmart-retail-sales-analysis
 Retail Sales Analysis & Power BI Dashboard (Walmart Dataset)
 
-Tools Used: SQL, Power BI, Python
+Tools Used: SQL, Power BI, Python     
 Status: Completed
 
 ⸻
@@ -23,31 +23,18 @@ Objectives
 ⸻
 
 Technologies Used
-	•	SQL Workbench – Data exploration, joins, cleaning
-	•	Python (Jupyter) – Quick validation checks
+	•	SQL Workbench – Data exploration, cleaning
+	•	Python (Jupyter) – Quick validation checks, joins larg tables
 	•	Power BI – Dashboard, KPIs, drill-down visuals
 	•	GitHub – Documentation & project versioning
 
 ⸻
 
-📂 Repository Structure
+Power BI Dashboard
 
-📁 data/              → Raw & cleaned datasets  
-📁 sql/               → Queries for cleaning, joining & analysis  
-📁 python/            → Optional exploratory notebook  
-📁 powerbi/           → .pbix file + dashboard screenshots  
-📁 docs/              → Project summary & exported visuals
+Live Interactive Dashboard
 
-
-⸻
-
-📊 Power BI Dashboard
-
-🔗 Live Interactive Dashboard
-
-👉 Click here to view the report:
-
-(https://aka.ms/AAyzv32)
+Click here to view the report: [https://aka.ms/AAyzv32](https://aka.ms/AAyzv32)
 
 Dashboard Pages
 
@@ -69,12 +56,12 @@ Page 2 — Economic Factors
 SQL Work (Highlights)
 
 Sample tasks performed:
-	•	Joining features, sales, stores
 	•	Handling missing values
 	•	Creating monthly aggregations
 	•	Identifying peak months and years
 	•	Holiday vs non-holiday comparison
 	•	Economic factor analysis
+	•	EDA
 
 All SQL queries are inside the /sql folder.
 
@@ -92,15 +79,18 @@ Key Insights
 What I Learned
 	•	Building a multi-page Power BI dashboard
 	•	Structuring SQL queries for business analysis
-	•	Cleaning and merging datasets in SQL
-	•	Creating drill-downs, DAX measures, and KPIs in Power BI
+	•	Cleaning datasets in SQL
+	•	Creating drill-downs, and KPIs in Power BI
 	•	Connecting economic indicators to retail performance
 
 ⸻
 
-📬 Contact
+Contact
 
 If you’d like to discuss the analysis or dashboard:
 
-Email Address: faiz.alharthi90@gmail.com
-LinkedIn: (www.linkedin.com/in/faiz-k-alharthi)
+Email Address:
+---faiz.alharthi90@gmail.com
+LinkedIn: 
+---www.linkedin.com/in/faiz-k-alharthi 
+
