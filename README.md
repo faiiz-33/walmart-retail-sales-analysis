@@ -89,8 +89,6 @@ Contact
 
 If you’d like to discuss the analysis or dashboard:
 
-Email Address:
----faiz.alharthi90@gmail.com
-LinkedIn: 
----www.linkedin.com/in/faiz-k-alharthi 
+Email Address: faiz.alharthi90@gmail.com    
+LinkedIn: ---www.linkedin.com/in/faiz-k-alharthi 
 
