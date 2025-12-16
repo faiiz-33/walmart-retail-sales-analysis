@@ -67,7 +67,7 @@ All SQL queries are inside the /sql folder.
 
 ⸻
 
-Key Insights
+Key Insights  
 	•	~33% of total revenue occurs during holiday weeks  
 	•	Base sales remain strong year-round (grocery-driven behavior)  
 	•	Store size correlates moderately with higher sales  
