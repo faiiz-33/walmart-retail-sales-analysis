@@ -68,11 +68,11 @@ All SQL queries are inside the /sql folder.
 ⸻
 
 Key Insights
-	•	~33% of total revenue occurs during holiday weeks
-	•	Base sales remain strong year-round (grocery-driven behavior)
-	•	Store size correlates moderately with higher sales
-	•	Fuel price and CPI show mild downward correlation with sales
-	•	Unemployment trends show no immediate short-term effect
+	•	~33% of total revenue occurs during holiday weeks  
+	•	Base sales remain strong year-round (grocery-driven behavior)  
+	•	Store size correlates moderately with higher sales  
+	•	Fuel price and CPI show mild downward correlation with sales  
+	•	Unemployment trends show no immediate short-term effect  
 
 ⸻
 
