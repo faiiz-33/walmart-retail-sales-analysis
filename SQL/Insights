@@ -40,14 +40,14 @@ B) Department-Level Analysis
 
 - Top 10 Best-Selling Departments  
 
-Departments ranked by total weekly sales:
+Departments ranked by total weekly sales:  
 
 | Rank | Department | Total Sales ($) |
 |-----:|-----------:|----------------:|
 | 1 | 92 | 483.9M |
 | 2 | 95 | 449.3M |
 | 3 | 38 | 393.1M |
-| 4 | 72 | 305.7M|
+| 4 | 72 | 305.7M |
 | 5 | 90 | 291.1M |
 
 Revenue is highly concentrated in a small subset of departments, indicating strong candidates for inventory prioritization and promotional focus.
@@ -56,7 +56,7 @@ Revenue is highly concentrated in a small subset of departments, indicating stro
 
 C) Date & Time Analysis  
 
-- Sales by Year
+- Sales by Year  
 
 |Year |	Total Sales ($)|
 |----:|---------------:|
