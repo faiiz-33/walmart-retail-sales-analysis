@@ -38,9 +38,10 @@ High performance is consistent week-to-week and not driven solely by longer oper
 
 B) Department-Level Analysis  
 
-- Top 10 Best-Selling Departments  
+* Top 10 Best-Selling Departments  
 
-Departments ranked by total weekly sales:  
+Departments ranked by total weekly sales:    
+
 
 | Rank | Department | Total Sales ($) |
 |-----:|-----------:|----------------:|
@@ -50,13 +51,15 @@ Departments ranked by total weekly sales:
 | 4 | 72 | 305.7M |
 | 5 | 90 | 291.1M |
 
+
 Revenue is highly concentrated in a small subset of departments, indicating strong candidates for inventory prioritization and promotional focus.
 
 ---
 
-## C) Date & Time Analysis
+* C) Date & Time Analysis
 
-### Sales by Year
+* Sales by Year  
+
 
 | Year | Total Sales ($) |
 |----:|----------------:|
@@ -64,11 +67,12 @@ Revenue is highly concentrated in a small subset of departments, indicating stro
 | 2011 | 2.45B |
 | 2012 | 2.00B |
 
+
 2011 was the strongest year, while 2012 shows a noticeable decline.
 
 ⸻
 
-- Average Sales by Month  
+* Average Sales by Month  
 	•	December is the strongest month on average  
 	•	January is the weakest  
 
@@ -76,7 +80,7 @@ Clear seasonal patterns exist, driven by holiday demand.
 
 ⸻
 
-- Week-to-Week Growth Analysis  
+* Week-to-Week Growth Analysis  
 
 Using SQL window functions, week-over-week changes were calculated per store.  
 
@@ -86,7 +90,7 @@ Sales exhibit significant short-term volatility, reinforcing the importance of t
 
 D) Key Business Questions (Core Insights)
 
-- Do Holidays Increase Sales?  
+* Do Holidays Increase Sales?  
 	•	Yes.  
 	•	Average weekly sales during holiday weeks are ~7% higher than non-holiday weeks.  
 
@@ -103,7 +107,7 @@ Finding:
 
 ⸻
 
-- Weather & Economic Factors  
+* Weather & Economic Factors  
 
 Temperature:  
 	•	No meaningful correlation with average weekly sales  
@@ -128,7 +132,7 @@ Phase 6 — Executive Summary (Presentation Insights)
 
 ⸻
 
-🧠 Key Takeaways
+* Key Takeaways
 	•	Sales are concentrated in specific stores and departments  
 	•	Seasonality (holidays, December) is a major driver of performance  
 	•	Store size and macroeconomic factors have limited predictive power  
@@ -136,6 +140,6 @@ Phase 6 — Executive Summary (Presentation Insights)
 
 ⸻
 
-Tools Used  
+* Tools Used  
 	•	SQL (MySQL) — data aggregation, joins, window functions  
 	•	Power BI (Web) — visualization and presentation  
