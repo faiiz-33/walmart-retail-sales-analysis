@@ -52,14 +52,14 @@ Departments ranked by total weekly sales:
 
 Revenue is highly concentrated in a small subset of departments, indicating strong candidates for inventory prioritization and promotional focus.
 
-⸻
+---
 
-C) Date & Time Analysis  
+## C) Date & Time Analysis
 
-- Sales by Year  
+### Sales by Year
 
-|Year |	Total Sales ($)|
-|----:|---------------:|
+| Year | Total Sales ($) |
+|----:|----------------:|
 | 2010 | 2.29B |
 | 2011 | 2.45B |
 | 2012 | 2.00B |
