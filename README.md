@@ -1,7 +1,7 @@
 # walmart-retail-sales-analysis
 Retail Sales Analysis & Power BI Dashboard (Walmart Dataset)
 
-Tools Used: SQL, Power BI, Python     
+Tools Used: SQL, Power BI     
 Status: Completed
 
 ⸻
@@ -24,7 +24,6 @@ Objectives
 
 Technologies Used
 	•	SQL Workbench – Data exploration, cleaning
-	•	Python (Jupyter) – Quick validation checks, joins larg tables
 	•	Power BI – Dashboard, KPIs, drill-down visuals
 	•	GitHub – Documentation & project versioning
 
@@ -68,7 +67,7 @@ All SQL queries are inside the /sql folder.
 ⸻
 
 Key Insights  
-	•	~33% of total revenue occurs during holiday weeks  
+	•	~7% increase of revenue happens during holiday weeks (December)  
 	•	Base sales remain strong year-round (grocery-driven behavior)  
 	•	Store size correlates moderately with higher sales  
 	•	Fuel price and CPI show mild downward correlation with sales  
