@@ -56,7 +56,7 @@ Revenue is highly concentrated in a small subset of departments, indicating stro
 
 ---
 
-* C) Date & Time Analysis
+C) Date & Time Analysis
 
 * Sales by Year  
 
